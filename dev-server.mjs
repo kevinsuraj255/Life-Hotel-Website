@@ -74,19 +74,21 @@ function sendJson(res, status, obj) {
 }
 
 function sendFile(res, filePath) {
-  fs.readFile(filePath, (error, data) => {
-    if (error) {
-      res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
-      res.end("Not found");
-      return;
-    }
-    const extension = path.extname(filePath).toLowerCase();
-    res.writeHead(200, {
-      "Content-Type": mimeTypes[extension] || "application/octet-stream",
-      "Access-Control-Allow-Origin": "*"
-    });
-    res.end(data);
+  const extension = path.extname(filePath).toLowerCase();
+  const contentType = mimeTypes[extension] || "application/octet-stream";
+
+  const stream = fs.createReadStream(filePath);
+  stream.on("error", () => {
+    res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+    res.end("Not found");
   });
+
+  res.writeHead(200, {
+    "Content-Type": contentType,
+    "Access-Control-Allow-Origin": "*"
+  });
+
+  stream.pipe(res);
 }
 
 async function handleConcierge(req, res) {
