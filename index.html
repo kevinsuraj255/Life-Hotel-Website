@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#06090f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Life Hotel NYC</title>
+  <meta
+    name="description"
+    content="Life Hotel NYC is a historic boutique hotel in Manhattan, once home to Life Magazine. Discover refined rooms, curated dining, and downtown New York energy."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="#about" class="brand brand-home" aria-label="Life Hotel New York, go to welcome section">
+        <span class="brand-mark">LIFE HOTEL</span>
+        <span class="brand-sub">NEW YORK</span>
+      </a>
+
+      <a href="#booking" class="btn btn-gold nav-book-btn">Book Now</a>
+    </div>
+
+    <div class="overlay-menu hidden" id="overlayMenu">
+      <div class="overlay-menu-panel">
+        <button class="overlay-close" id="overlayClose" aria-label="Close navigation">&times;</button>
+
+        <nav class="overlay-menu-content">
+          <a href="#about">About</a>
+          <a href="#history">History</a>
+          <a href="#accommodations">Accommodations</a>
+          <a href="#dining">Dining</a>
+          <a href="#offers">Offers</a>
+          <a href="#groups">Group Stays</a>
+          <a href="#explore">Explore NYC</a>
+          <a href="#rooms">Room types</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="overlay-contact">
+          <p>19 West 31st Street<br>New York, NY 10001</p>
+          <p>(212) 615-9900</p>
+          <p>info@lifehotelnyc.com</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero hero-home">
+      <div class="hero-slides">
+        <div class="hero-slide active" style="background-image: url('images/hero-1.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-2.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-3.jpg');"></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-center-mark">
+        <p class="eyebrow">Historic Boutique Hotel in Manhattan</p>
+        <h1>Life Hotel NYC</h1>
+        <p class="hero-text">
+          Once home to Life Magazine, now reimagined as a refined downtown stay
+          where New York history, editorial culture, and modern luxury meet.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-gold">Reserve Your Stay</a>
+          <a href="#history" class="btn btn-outline">Discover the Story</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section booking-section" id="booking">
+      <div class="booking-card booking-card-wide">
+        <h3>Reserve Your Stay</h3>
+
+        <div class="booking-grid">
+          <div class="field">
+            <label for="checkIn">Check In</label>
+            <input type="date" id="checkIn" />
+          </div>
+
+          <div class="field">
+            <label for="checkOut">Check Out</label>
+            <input type="date" id="checkOut" />
+          </div>
+
+          <div class="field">
+            <label for="guestCount">Guests</label>
+            <select id="guestCount">
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="bookingRoomType">Room Type</label>
+            <select id="bookingRoomType">
+              <option value="all">Any</option>
+              <option value="Standard">Standard</option>
+              <option value="Deluxe">Deluxe</option>
+              <option value="Suite">Suite</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn btn-gold btn-full" id="checkAvailabilityBtn">Check Availability</button>
+      </div>
+    </section>
+
+    <section class="section intro intro-editorial" id="about">
+      <div class="section-heading center-heading">
+        <p class="eyebrow">Welcome To</p>
+        <h2>Life Hotel New York</h2>
+      </div>
+
+      <div class="editorial-copy">
+        <p>
+          Once the legendary home of <strong>Life Magazine</strong>, Life Hotel NYC
+          now stands as one of Manhattan’s most distinctive boutique stays. Set in the
+          heart of NoMad, the hotel blends historic architecture, editorial heritage,
+          and contemporary comfort across a thoughtfully curated guest experience.
+        </p>
+        <p>
+          Blue, white, gold, and black define the visual language of the property,
+          reflecting a balance of timeless New York glamour and modern refinement.
+        </p>
+      </div>
+    </section>
+
+    <section class="section overlap-section" id="history">
+      <div class="overlap-grid">
+        <div class="overlap-text-card">
+          <p class="eyebrow">History</p>
+          <h2>From Publishing Landmark to Boutique Destination</h2>
+          <p>
+            Designed in the Beaux-Arts tradition, the building at 19 West 31st Street
+            carries a remarkable legacy in New York City history. It once served as the
+            first home of Life Magazine, where writers, editors, artists, and cultural
+            tastemakers helped shape an era of American storytelling.
+          </p>
+          <p>
+            Today, Life Hotel preserves that spirit through rich design, layered details,
+            and an atmosphere that feels distinctly editorial, creative, and unmistakably New York.
+          </p>
+        </div>
+
+        <div class="overlap-photo-card">
+          <img src="images/history-exterior.jpg" alt="Life Hotel entrance" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section accommodations-section" id="accommodations">
+      <div class="section-heading">
+        <p class="eyebrow">Accommodations</p>
+        <h2>Rooms With Character and Comfort</h2>
+      </div>
+
+      <div class="accommodation-cards">
+        <article class="accommodation-card accommodation-card-action" data-room-type="Standard" tabindex="0" role="button" aria-label="View Standard room categories">
+          <img src="images/room-classic-queen.jpg" alt="Classic Queen guest room" />
+          <div class="accommodation-card-body">
+            <h3>Classic Queen</h3>
+            <p>Cozy, design-forward accommodations with boutique detailing and vintage-inspired character.</p>
+          </div>
+        </article>
+
+        <article class="accommodation-card accommodation-card-action" data-room-type="Deluxe" tabindex="0" role="button" aria-label="View Deluxe room categories">
+          <img src="images/room-studio-king.jpg" alt="Studio King guest room" />
+          <div class="accommodation-card-body">
+            <h3>Studio King</h3>
+            <p>Spacious interiors with arched windows, editorial styling, and a polished Manhattan feel.</p>
+          </div>
+        </article>
+
+        <article class="accommodation-card accommodation-card-action" data-room-type="Suite" tabindex="0" role="button" aria-label="View Suite room categories">
+          <img src="images/room-deluxe.jpg" alt="Deluxe guest room" />
+          <div class="accommodation-card-body">
+            <h3>Suite Collection</h3>
+            <p>Expanded layouts for guests seeking a more luxurious and residential New York experience.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section overlap-section" id="dining">
+      <div class="overlap-grid reverse">
+        <div class="overlap-photo-card">
+          <img src="images/dining-zoi.jpg" alt="Zoi Mediterranean dining room" />
+        </div>
+
+        <div class="overlap-text-card">
+          <p class="eyebrow">Dining</p>
+          <h2>Zoi Mediterranean</h2>
+          <p>
+            A stylish dining experience rooted in Mediterranean flavors, warm hospitality,
+            and downtown energy. From breakfast through evening cocktails, the restaurant
+            extends the hotel’s editorial and social spirit.
+          </p>
+          <a href="https://www.lifehotelnewyork.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit Life Hotel</a>
+        </div>
+      </div>
+
+      <div class="overlap-grid">
+        <div class="overlap-text-card">
+          <p class="eyebrow">Lounge</p>
+          <h2>TEN 11 Lounge</h2>
+          <p>
+            Located beneath the lobby, TEN 11 is an intimate lounge where elegance and
+            downtown energy meet—named for the building’s iconic 1011 address.
+          </p>
+          <a href="https://www.lifehotelnewyork.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit Life Hotel</a>
+        </div>
+
+        <div class="overlap-photo-card">
+          <img src="images/dining-ten11.jpg" alt="Life Hotel lounge and interior details" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section offers-section" id="offers">
+      <div class="section-heading center-heading">
+        <p class="eyebrow">Special Offers</p>
+        <h2>Curated Stay Packages</h2>
+      </div>
+
+      <p class="offer-hint center-heading">Select a package to apply a demo rate adjustment when you view room details.</p>
+      <div class="offer-grid">
+        <button type="button" class="offer-card offer-card-select" data-offer="stay-more" aria-pressed="false">
+          <h3>Stay More, Save More</h3>
+          <p>Longer stays with added value in the heart of Manhattan.</p>
+          <span class="offer-badge">10% off nightly rate</span>
+        </button>
+        <button type="button" class="offer-card offer-card-select" data-offer="empire" aria-pressed="false">
+          <h3>Empire Experience</h3>
+          <p>A New York getaway inspired by the energy of the skyline.</p>
+          <span class="offer-badge">15% off Deluxe &amp; Suite</span>
+        </button>
+        <button type="button" class="offer-card offer-card-select" data-offer="advance" aria-pressed="false">
+          <h3>Advance Experience</h3>
+          <p>Plan ahead and enjoy exclusive boutique hotel savings.</p>
+          <span class="offer-badge">12% off when booked 21+ days ahead</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section group-section" id="groups">
+      <div class="overlap-grid">
+        <div class="overlap-text-card">
+          <p class="eyebrow">Group Stays</p>
+          <h2>Creative Gatherings in NoMad</h2>
+          <p>
+            From wedding weekends to cast stays, retreats, and social gatherings,
+            Life Hotel NYC offers a setting that feels both intimate and iconic.
+            Historic character, central location, and personalized service make it
+            ideal for memorable group stays.
+          </p>
+          <a href="mailto:info@lifehotelnyc.com" class="btn btn-gold">Send A Request</a>
+        </div>
+
+        <div class="overlap-photo-card">
+          <img src="images/groups.jpg" alt="Life Hotel architectural detail" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section explore-section" id="explore">
+      <div class="section-heading center-heading">
+        <p class="eyebrow">Explore New York</p>
+        <h2>Stay Steps From Iconic Manhattan Landmarks</h2>
+      </div>
+
+      <div class="explore-grid">
+        <button class="explore-card explore-btn" data-place="Empire State Building">Empire State Building</button>
+        <button class="explore-card explore-btn" data-place="Madison Square Garden">Madison Square Garden</button>
+        <button class="explore-card explore-btn" data-place="Broadway">Broadway</button>
+        <button class="explore-card explore-btn" data-place="Fifth Avenue">Fifth Avenue</button>
+        <button class="explore-card explore-btn" data-place="Koreatown">Koreatown</button>
+        <button class="explore-card explore-btn" data-place="Flatiron District">Flatiron District</button>
+      </div>
+    </section>
+
+    <section class="section rooms-section" id="rooms">
+      <div class="section-heading rooms-heading">
+        <div>
+          <p class="eyebrow">Rooms</p>
+          <h2>Explore Room Categories</h2>
+          <p class="rooms-section-lead">
+            Browse our Standard, Deluxe, and Suite styles across the tower. For guest safety and privacy,
+            we never display live vacancy, housekeeping status, or individual room numbers online—availability
+            is always confirmed when you book or speak with the hotel.
+          </p>
+        </div>
+
+        <div class="filters">
+          <div class="field field-search">
+            <label for="roomSearch" class="visually-hidden">Search room categories</label>
+            <input type="search" id="roomSearch" class="room-search-input" placeholder="Search categories" autocomplete="off" />
+          </div>
+
+          <select id="floorFilter" aria-label="Filter by typical floor">
+            <option value="all">All Floors</option>
+          </select>
+
+          <select id="typeFilter" aria-label="Filter by room type">
+            <option value="all">All Types</option>
+            <option value="Standard">Standard</option>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Suite">Suite</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="rooms-privacy-note">
+        Sample rates shown are for planning only and may differ from the booking engine. Final room assignment is never published in advance on this site.
+      </p>
+
+      <div id="roomsContainer" class="rooms-grid"></div>
+    </section>
+
+    <section class="section newsletter-section">
+      <div class="newsletter-box">
+        <div>
+          <p class="eyebrow">Stay In The Know</p>
+          <h2>Receive Offers and Hotel Updates</h2>
+          <p>Join the mailing list for announcements, offers, and New York inspiration.</p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <input type="text" id="newsletterName" name="name" placeholder="First Name" autocomplete="given-name" />
+          <input type="email" id="newsletterEmail" name="email" placeholder="Email Address" autocomplete="email" required />
+          <p class="form-error hidden" id="newsletterError" role="alert"></p>
+          <button type="submit" class="btn btn-gold">Sign Me Up</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div>
+      <h3>Life Hotel NYC</h3>
+      <p>19 West 31st Street, New York, NY 10001</p>
+      <p>(212) 615-9900</p>
+    </div>
+
+    <div class="footer-links">
+      <button type="button" class="link-like" data-info-modal="faq">FAQ</button>
+      <button type="button" class="link-like" data-info-modal="contact">Contact</button>
+      <button type="button" class="link-like" data-info-modal="privacy">Privacy Policy</button>
+      <button type="button" class="link-like" data-info-modal="accessibility">Accessibility</button>
+    </div>
+
+    <p class="footer-note">© 2026 Life Hotel NYC. All rights reserved.</p>
+  </footer>
+
+  <div class="modal hidden" id="roomModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"></div>
+    <div class="modal-content popup-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close popup-close-btn" id="modalClose" aria-label="Close">×</button>
+      <p class="eyebrow popup-eyebrow">Room category</p>
+      <h2 class="popup-title" id="modalTitle">Room category</h2>
+      <div class="modal-details popup-body" id="modalDetails"></div>
+      <div class="modal-actions popup-actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="infoModal" aria-hidden="true">
+    <div class="modal-backdrop" id="infoModalBackdrop" aria-hidden="true"></div>
+    <div class="modal-content popup-panel" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+      <button type="button" class="modal-close popup-close-btn" id="infoModalClose" aria-label="Close">×</button>
+      <p class="eyebrow popup-eyebrow" id="infoModalEyebrow">Information</p>
+      <h2 class="popup-title" id="infoModalTitle">Title</h2>
+      <div class="modal-details info-modal-body popup-body" id="infoModalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="availability-popup hidden" id="availabilityPopup" aria-hidden="true">
+    <div class="availability-popup-card popup-panel" role="dialog" aria-modal="true" aria-labelledby="availabilityTitle">
+      <button type="button" class="availability-close popup-close-btn" id="availabilityClose" aria-label="Close">×</button>
+      <p class="eyebrow popup-eyebrow">Stay planner</p>
+      <h2 class="popup-title" id="availabilityTitle">Rooms Found</h2>
+      <p id="availabilityMessage" class="availability-message popup-message"></p>
+      <div class="availability-actions popup-actions">
+        <button type="button" class="btn btn-gold" id="availabilityViewRooms">View room types</button>
+        <button type="button" class="btn btn-outline" id="availabilityDismiss">Not now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="location-popup hidden" id="locationPopup" aria-hidden="true">
+    <div class="location-popup-card popup-panel" role="dialog" aria-modal="true" aria-labelledby="locationTitle">
+      <button type="button" class="location-close popup-close-btn" id="locationClose" aria-label="Close">×</button>
+      <p class="eyebrow popup-eyebrow">Near Life Hotel</p>
+      <h2 class="popup-title" id="locationTitle">Empire State Building</h2>
+      <p id="locationAddress" class="location-address popup-message"></p>
+      <p id="locationDistance" class="location-distance popup-message"></p>
+      <div class="location-actions popup-actions">
+        <a id="locationMapLink" href="#" target="_blank" rel="noopener" class="btn btn-gold">Open in Maps</a>
+        <button type="button" class="btn btn-outline" id="locationDismiss">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" id="chat-button" class="chat-button" aria-label="Open concierge chat">
+  💬
+</button>
+
+<!-- CHAT WINDOW -->
+<div id="chat-window" class="chat-window hidden">
+  <div class="chat-header">
+    <div class="chat-header-main">
+      <div class="chat-header-top">
+        <span class="chat-brand">Life Hotel Concierge</span>
+        <span class="chat-ai-pill" title="Ask questions or make requests—answers are AI-generated">AI</span>
+      </div>
+      <p class="chat-header-tagline">Questions &amp; requests welcome</p>
+    </div>
+    <button id="chat-close" type="button" class="chat-header-close" aria-label="Close chat">✕</button>
+  </div>
+
+  <div id="chat-messages" class="chat-messages">
+    <div class="chat-message bot">
+      Hi—I can answer questions about Life Hotel, NoMad, and your trip, and help with requests (late checkout, dining ideas, what to tell the front desk, and more). I can’t change reservations from here; for that, use Reserve Your Stay on this page or call (212) 615-9900.
+    </div>
+  </div>
+
+  <div class="chat-input-area">
+    <label class="visually-hidden" for="chat-input">Message to concierge</label>
+    <input id="chat-input" type="text" placeholder="Ask something or say what you need…" autocomplete="off" />
+    <button id="chat-send" type="button" class="chat-send-btn">Send</button>
+  </div>
+</div>
+
+  <nav class="app-tabbar" id="appTabbar" aria-label="Quick navigation">
+    <a href="#about" class="app-tab">Home</a>
+    <a href="#booking" class="app-tab app-tab-primary">Book</a>
+    <a href="#rooms" class="app-tab">Rooms</a>
+    <button type="button" class="app-tab" id="appTabMenu" aria-label="Open menu">Menu</button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
