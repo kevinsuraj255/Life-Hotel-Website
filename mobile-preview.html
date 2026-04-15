@@ -92,16 +92,15 @@
 </head>
 <body>
   <h1>Life Hotel NYC — mobile-width preview</h1>
-  <p class="sub">Approx. iPhone 14 width (390px). Scroll inside the frame. AI chat needs the dev server on the same host.</p>
+  <p class="sub">Approx. iPhone 14 width (390px). Scroll inside the frame. Concierge chat uses this site’s API on the same host.</p>
   <div class="frame-wrap">
     <div class="frame">
       <iframe src="index.html" title="Life Hotel site at mobile width"></iframe>
     </div>
   </div>
   <div class="hint">
-    <strong>How to open:</strong> from this folder run
-    <code>node dev-server.mjs</code>
-    then open <code>http://127.0.0.1:4180/mobile-preview.html</code> (use your port if different). Or open the site in Chrome → <strong>F12</strong> → <strong>Ctrl+Shift+M</strong> (toggle device toolbar) → choose a phone preset for true mobile layout + touch.
+    <strong>Testing locally:</strong> run <code>node dev-server.mjs</code> and open <code>/mobile-preview.html</code> on your port.
+    <strong>Or</strong> in Chrome: <strong>F12</strong> → <strong>Ctrl+Shift+M</strong> → pick a phone preset for touch + true viewport.
   </div>
 </body>
 </html>
